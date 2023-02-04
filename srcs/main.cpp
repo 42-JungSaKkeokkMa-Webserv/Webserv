@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../include/webserv.hpp"
 
 int main(int argc, char **argv)
 {
@@ -15,10 +16,10 @@ int main(int argc, char **argv)
 		config = argv[1];
 	}
 
-	//std::vector<Server> server_block;
-
 	try {
-		// loop
+		std::vector<ServerInfo> server_block = parse_config(config);
+		//std::cout << config_content << std::endl;
+
 	}
 	catch (std::exception& e) {
 		e.what();
